@@ -1,17 +1,18 @@
 import axios from "axios";
-import Followers from "../Followers/Followers";
+import { limit } from "../refs/constants";
 
-const BASE_URL = "https://6478cebd362560649a2e7a44.mockapi.io/tweets/";
+axios.defaults.baseURL = "https://6478cebd362560649a2e7a44.mockapi.io/tweets/";
 
-export const getUsers = async (user) => {
-  return await axios
-    .get(`${BASE_URL}/${user}`)
-    .then((response) => response.data);
-};
+const searchParams = new URLSearchParams({
+  limit,
+});
 
-export const updateUsers = async (userId) => {
-  return await axios
-    .put(`${BASE_URL}/${userId}`)
-    .then((response) => response.data);
-};
+export default async function getUsers(page = 1) {
+  try {
+    const { data } = await axios.get(`/users?${searchParams}&page=${page}`);
 
+    return data;
+  } catch (error) {
+    console.log(error.message);
+  }
+}
