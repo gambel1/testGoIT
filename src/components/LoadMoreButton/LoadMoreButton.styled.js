@@ -9,6 +9,7 @@ export const Button = styled.button`
   padding: 14px 56px;
   font-size: 18px;
   line-height: 22px;
+  margin-bottom: 20px;
 
   text-transform: uppercase;
   background: #ebd8ff;
