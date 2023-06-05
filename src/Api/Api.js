@@ -7,7 +7,7 @@ const searchParams = new URLSearchParams({
   limit,
 });
 
-export default async function getUsers(page = 1) {
+export const getUsers = async (page = 1) => {
   try {
     const { data } = await axios.get(`/users?${searchParams}&page=${page}`);
 
@@ -15,4 +15,16 @@ export default async function getUsers(page = 1) {
   } catch (error) {
     console.log(error.message);
   }
-}
+};
+
+export const updateUser = async (userId, userFollowers) => {
+  try {
+    const { data } = await axios.put(`/users/${userId}`, {
+      followers: userFollowers,
+    });
+
+    return data;
+  } catch (error) {
+    console.log(error.message);
+  }
+};
