@@ -48,7 +48,8 @@ export default function Tweets() {
     };
 
     fetchData();
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [page]);
 
   useEffect(() => {
     const offsetTrigger = 350;
