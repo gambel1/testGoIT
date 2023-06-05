@@ -1,4 +1,4 @@
-import  getUsers  from "../../api/operations";
+import getUsers from "../../api/Api";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import { limit, lsKeys, totalItems } from "../../refs/constants";
 import TweetsList from "../../components/TweetsList/TweetsList";
@@ -48,7 +48,7 @@ export default function Tweets() {
     };
 
     fetchData();
-  }, [page]);
+  }, []);
 
   useEffect(() => {
     const offsetTrigger = 350;

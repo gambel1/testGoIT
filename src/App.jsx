@@ -1,6 +1,6 @@
 import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home/Home";
-import Operations from "./pages/Tweets/Operations";
+import Tweets from "./pages/Tweets/Tweets";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 export default function App() {
@@ -8,7 +8,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="/tweets" element={<Operations />} />
+        <Route path="/tweets" element={<Tweets />} />
 
         <Route path="*" element={<Navigate to={"/"} />} />
       </Route>
