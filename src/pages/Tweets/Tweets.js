@@ -47,7 +47,7 @@ export default function Tweets() {
     };
 
     fetchData();
-  }, [page]);
+  }, [users, page]);
 
   useEffect(() => {
     const offsetTrigger = 350;
