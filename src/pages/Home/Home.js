@@ -1,5 +1,5 @@
 import { TitleH1 } from "./Home.styled";
 
-export default function () {
+export default function Home () {
   return <TitleH1>Hello! Welcome my page!</TitleH1>;
 }

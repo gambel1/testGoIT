@@ -9,13 +9,14 @@ import { useEffect, useState } from "react";
 
 export default function Tweets() {
   const [users, setUsers] = useLocalStorage(lsKeys.users, []);
-  const [filter, setFilter] = useLocalStorage(lsKeys, ["Show all"]);
   const [followings, setFollowings] = useLocalStorage(lsKeys.followings, []);
   const [page, setPage] = useState(1);
   const [totalHits, setTotalHits] = useState(totalItems);
   const [indexLimit, setIndexLimit] = useState(limit);
   const [isLoading, setIsLoading] = useState(false);
   const [isOffsetPage, setIsOffsetPage] = useState(false);
+
+  const filter = (lsKeys, ["Show all"]);
 
   const isSameUser = (a, b) => a.id === b.id;
   const compareArr = (arrA, arrB, compareFunction) =>
@@ -110,6 +111,7 @@ export default function Tweets() {
       {totalHits > limit && (
         <LoadMoreButton loading={isLoading} onClick={handleChangePage} />
       )}
+      {isOffsetPage}
     </div>
   );
 }

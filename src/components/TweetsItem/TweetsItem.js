@@ -1,6 +1,5 @@
 import {
   ListLi,
-  ListWrapper,
   ListAvatar,
   ListTweetsP,
   ListFollowP,
@@ -14,13 +13,7 @@ import avatar from "../../img/avatar.png";
 import logo from "../../img/logo.svg";
 
 export default function TweetsItem({ user, onClick }) {
-  const {
-    id,
-    user: name,
-    followers,
-    /*avatar,*/ tweets,
-    isFollow = false,
-  } = user;
+  const { id, followers, /*avatar,*/ tweets, isFollow = false } = user;
 
   return (
     <ListLi>
