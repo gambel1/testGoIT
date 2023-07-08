@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/testGoIT/static/css/main.9418394e.css",
+    "main.js": "/testGoIT/static/js/main.cd99154e.js",
+    "static/media/img-1.webp": "/testGoIT/static/media/img-1.eb0188ae87e34a45239a.webp",
+    "static/media/avatar.png": "/testGoIT/static/media/avatar.124bb633313c2d5adbe0.png",
+    "static/media/logo.svg": "/testGoIT/static/media/logo.e917114d7945c04c85a8946a331d28b6.svg",
+    "index.html": "/testGoIT/index.html",
+    "main.9418394e.css.map": "/testGoIT/static/css/main.9418394e.css.map",
+    "main.cd99154e.js.map": "/testGoIT/static/js/main.cd99154e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9418394e.css",
+    "static/js/main.cd99154e.js"
+  ]
+}
